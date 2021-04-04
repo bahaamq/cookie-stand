@@ -1,6 +1,6 @@
 
 'use strict'
-let arrayLoc=[]
+let arrayLoc = []
 
 
 let Seattle = {
@@ -19,11 +19,11 @@ let Tokyo = {
     minCustomers: 3,
     maxCustomers: 24,
     avgCookie: 1.2,
-    getValues:  function () {
+    getValues: function () {
 
         printResults(this.maxCustomers, this.minCustomers, this.avgCookie)
-  
-}
+
+    }
 }
 
 let Dubai = {
@@ -36,7 +36,7 @@ let Dubai = {
         printResults(this.maxCustomers, this.minCustomers, this.avgCookie)
     },
 
-   
+
 }
 
 
@@ -83,14 +83,14 @@ function printResults(maxCustomers, minCustomers, avgCookie) {
     let storeLoc = document.createElement('h3')
     parent.appendChild(storeLoc)
 
-    let locationContainer=locations[loctionCounter]
+    let locationContainer = locations[loctionCounter]
     storeLoc.textContent = locationContainer
     loctionCounter++
 
     let ulElement = document.createElement('ul')
     let liElement = ''
-    let randCustomer =0
-    let avgCookies=0
+    let randCustomer = 0
+    let avgCookies = 0
     parent.appendChild(ulElement);
 
     let sumOfCookies = 0;
@@ -105,7 +105,7 @@ function printResults(maxCustomers, minCustomers, avgCookie) {
         randCustomer = randomNumber(maxCustomers, minCustomers)
         avgCookies = calcAvg(avgCookie, randCustomer)
 
-         // pront location name at the top
+        // pront location name at the top
         listItem[i] = `${startHour}${time}: ${avgCookies} cookies`
         liElement = document.createElement('li')
         ulElement.appendChild(liElement)
@@ -117,15 +117,14 @@ function printResults(maxCustomers, minCustomers, avgCookie) {
     ulElement.appendChild(liElement)
     liElement.textContent = `Total: ${sumOfCookies} cookies`
 
-  
+
 }
 
 
-//Calling functions from method
 
-let locations =[Seattle.location,Tokyo.location,Dubai.location,Paris.location,Lima.location]
+let locations = [Seattle.location, Tokyo.location, Dubai.location, Paris.location, Lima.location]
 
-let loctionCounter=0
+let loctionCounter = 0
 
 Seattle.getValues()
 Tokyo.getValues()
