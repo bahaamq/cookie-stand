@@ -50,7 +50,7 @@ CookieStore.prototype.getValues = function () {
     let location = document.createElement('td')
     table.appendChild(location)
     location.textContent = this.location // print location name on the first td.
-    location.setAttribute("style", "border:  1px solid; ")
+  //  location.setAttribute("style", "border:  1px solid; ")
     for (let i = 0; i < Workinghours; i++) {
         rand = this.getrandomNumOfCustomer() // get random num of customers
         avgPerHour = this.getAvgCookiePerHour(rand, this.avgCookie) //calc Avg based on the random num of customers
@@ -65,7 +65,7 @@ CookieStore.prototype.getValues = function () {
     let totalCeil = document.createElement('td')
     table.appendChild(totalCeil)
     totalCeil.textContent = total
-    totalCeil.setAttribute("style", "border:  1px solid;")
+    // totalCeil.setAttribute("style", "border:  1px solid;")
 
     callFooter++;
     //calling table footer (total) once all markets are printed on the table
@@ -111,7 +111,7 @@ function footer(sum) {
     let row = document.createElement('tr')
     table.appendChild(row)
     footerRow = document.createElement('td')
-    footerRow.setAttribute("style", "border:  1px solid; ")
+   // footerRow.setAttribute("style", "border:  1px solid; ")
     table.appendChild(footerRow)
     footerRow.textContent = 'Total'
 
@@ -132,7 +132,7 @@ function footer(sum) {
         footerRow.textContent = total
         total = 0 // to calculate the total avg for all locations for the next hour
 
-        footerRow.setAttribute("style", "border:  1px solid; ")
+        // footerRow.setAttribute("style", "border:  1px solid; ")
     }
     alltotal(allTotal)// to print total hours for all locations and all hours
 
@@ -141,7 +141,7 @@ function alltotal(sumOfAll) {
     footerRow = document.createElement('td')
     table.appendChild(footerRow)
     footerRow.textContent = sumOfAll
-    footerRow.setAttribute("style", "border:  1px solid; ")
+    // footerRow.setAttribute("style", "border:  1px solid; ")
 }
 
 //this will create ceil for each row after and before (header&footer)
@@ -149,7 +149,7 @@ function eachrow(avgPerHour) {
     let ceil = document.createElement('td')
     table.appendChild(ceil)
     ceil.textContent = avgPerHour
-    ceil.setAttribute("style", "border:  1px solid; ")
+    // ceil.setAttribute("style", "border:  1px solid; ")
     
 }
 
