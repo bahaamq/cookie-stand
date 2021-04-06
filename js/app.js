@@ -7,7 +7,10 @@ function CookieStore(location, minCustomers, maxCustomers, avgCookie) {
     this.maxCustomers = maxCustomers
     this.avgCookie = avgCookie
 
+    
 }
+
+
 //Return random num of customers btw(min-max) customers each hour
 CookieStore.prototype.getrandomNumOfCustomer = function () {
     return randomNumber(this.minCustomers, this.maxCustomers)
