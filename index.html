@@ -1,95 +1,118 @@
-function printResults(maxCustomers, minCustomers, avgCookie) {
-    let startHour = 6;
-    let time = 'am'
-    let listItem = []
+<!DOCTYPE html>
+<html lang="en">
 
-    let parent = document.getElementById('parent');
-    let storeLoc = document.createElement('h3')
-    parent.appendChild(storeLoc)
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
 
-    let locationContainer=locations[loctionCounter]
-    storeLoc.textContent = locationContainer
-    loctionCounter++
+    <link rel="stylesheet" href="css/style.css">
 
-    let ulElement = document.createElement('ul')
-    let liElement = ''
-    let randCustomer =0
-    let avgCookies=0
-    parent.appendChild(ulElement);
+</head>
 
-    let sumOfCookies = 0;
-    for (let i = 0; i < 14; i++) {
-        if (startHour != 12)
-            startHour = startHour % 12
-        else {
-            time = 'pm'
-        }
-        randCustomer = randomNumber(maxCustomers, minCustomers)
-        avgCookies = calcAvg(avgCookie, randCustomer)
+<body>
+    <header >
+        <h1 class="left">Salmon4Cookies</h1>
 
-         // print location name at the top
-        listItem[i] = `${startHour}${time}: ${avgCookies} cookies`
-        liElement = document.createElement('li')
-        ulElement.appendChild(liElement)
-        liElement.textContent = listItem[i]
-        startHour++;
-        sumOfCookies = sumOfCookies + avgCookies
-    }
-    liElement = document.createElement('li')
-    ulElement.appendChild(liElement)
-    liElement.textContent = `Total: ${sumOfCookies} cookies`
+        <nav class="right">
+            <ul>
 
-}
+                <li> <a href="sales.html">Sales</a> </li>
+         
+                <li> <a href="index.html">Home</a> </li>
 
 
+            </ul>
 
-
-
-let Tokyo = {
-    location: 'Tokyo',
-    minCustomers: 3,
-    maxCustomers: 24,
-    avgCookie: 1.2,
-    getValues: function () {
-
-        printResults(this.maxCustomers, this.minCustomers, this.avgCookie)
-    }
-}
-
-
-let Dubai = {
-    location: 'Dubai',
-    minCustomers: 11,
-    maxCustomers: 38,
-    avgCookie: 3.7,
-    getValues: function () {
-
-        printResults(this.maxCustomers, this.minCustomers, this.avgCookie)
-    }
+        </nav>
    
-}
+    </header>
+<main class="clear">
+
+    <section class="textSection">
+        
+        <p>Special offer for Families.</p>
+     
+    </section>
+  <section id="hero">
+      <img src="https://raw.githubusercontent.com/LTUC/amman-201d20/main/class-08/lab-b/assets/family.jpg">
+      </section>
 
 
-let Paris = {
-    location: 'Paris',
-    minCustomers: 20,
-    maxCustomers: 38,
-    avgCookie: 2.3,
-    getValues: function () {
+      <section class="textSection">
+        
+        <p>Our products </p>
+      </section>
+<section class="main-product">
+    <img class="left"src="https://raw.githubusercontent.com/LTUC/amman-201d20/main/class-08/lab-b/assets/chinook.jpg">
+    <p class="right"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut eveniet illum deleniti autem eaque sed tempora assumenda et sit nemo, quod rem minus harum distinctio esse ipsam nulla amet.</p>
+</section>
+<section class="clear main-product">
+    <p class="right"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut eveniet illum deleniti autem eaque sed tempora assumenda et sit nemo, quod rem minus harum distinctio esse ipsam nulla amet.</p>
+    <img class="left"src="https://raw.githubusercontent.com/LTUC/amman-201d20/main/class-08/lab-b/assets/cutter.jpeg">
+    </section>
+    <section class="clear main-product">
+        <p class="right"> Lorem ipsumipsumipsumipsumipsumipsumipsumipsum dolor sit amet consectetur adipisicing elit. Quaerat aut eveniet illum deleniti autem eaque sed tempora assumenda et sit nemo, quod rem minus harum distinctio esse ipsam nulla amet.</p>
 
-        printResults(this.maxCustomers, this.minCustomers, this.avgCookie)
-    }
-}
-
-let Lima = {
-    location: 'Lima',
-    minCustomers: 2,
-    maxCustomers: 16,
-    avgCookie: 4.6,
-    getValues: function () {
-
-        printResults(this.maxCustomers, this.minCustomers, this.avgCookie)
-    }
-}
+    <img class="left"src="https://raw.githubusercontent.com/LTUC/amman-201d20/main/class-08/lab-b/assets/fish.jpg">
+</section>
 
 
+       <img id="tshirt" class="clear"src="https://raw.githubusercontent.com/LTUC/amman-201d20/main/class-08/lab-b/assets/shirt.jpg">  
+
+    <section class="textSection">
+        
+        <p>Contact us</p>
+     
+    </section>
+
+    <table class="clear" id="visitor">
+        <tr>
+            <th>Location</th>
+            <th>Working Hours</th>
+            <th>Phone</th>
+
+        </tr>
+        <tr>
+            <td>Seattle</td>
+            <td>6 AM - 7 PM</td>
+            <td>(+1) 45454454</td>
+       
+        </tr>
+        <tr>
+            <td>Tokyo</td>
+            <td>6 AM - 7 PM</td>
+            <td>(+1) 45454454</td>
+       
+        </tr>
+        <tr>
+            <td>Dubai</td>
+            <td>6 AM - 7 PM</td>
+            <td>(+1) 45454454</td>
+       
+        </tr>
+        <tr>
+            <td>Lima</td>
+            <td>6 AM - 7 PM</td>
+            <td>(+1) 45454454</td>
+       
+        </tr>
+        <tr>
+            <td>Paris</td>
+            <td>6 AM - 7 PM</td>
+            <td>(+1) 45454454</td>
+       
+        </tr>
+
+    </table>
+
+    <footer>
+        <p>All rights Reserved &copy;	</p>    
+        </footer>
+    
+</main>
+
+
+</body>
+
+</html>
