@@ -1,13 +1,13 @@
 'use strict'
 
+let allElements=[]
 //Construvtor function to share properties with all store locations
 function CookieStore(location, minCustomers, maxCustomers, avgCookie) {
     this.location = location
     this.minCustomers = minCustomers
     this.maxCustomers = maxCustomers
     this.avgCookie = avgCookie
-
-    
+    allElements.push(this)
 }
 
 
@@ -29,7 +29,7 @@ let avgForAllstoresContainer = []
 let callFooter = 0
 let headerFlag = true
 
-const locationNum = 5 //number of stores in different locations
+let locationNum = 5 //number of stores in different locations
 const Workinghours = 14 //number of working hours
 const workHour = [
     '6 am', '7 am', '8 am', '9 am', '10 am',
@@ -43,8 +43,7 @@ CookieStore.prototype.getValues = function () {
         header(parent, table)
         headerFlag = false
     }
-
-    let rand = this.getrandomNumOfCustomer()
+    let rand = 0;
     let avgPerHour = 0;
     let total = 0;
 
@@ -53,7 +52,6 @@ CookieStore.prototype.getValues = function () {
     let location = document.createElement('td')
     table.appendChild(location)
     location.textContent = this.location // print location name on the first td.
-  //  location.setAttribute("style", "border:  1px solid; ")
     for (let i = 0; i < Workinghours; i++) {
         rand = this.getrandomNumOfCustomer() // get random num of customers
         avgPerHour = this.getAvgCookiePerHour(rand, this.avgCookie) //calc Avg based on the random num of customers
@@ -71,6 +69,7 @@ CookieStore.prototype.getValues = function () {
     // totalCeil.setAttribute("style", "border:  1px solid;")
 
     callFooter++;
+    console.log("Footer"+callFooter)
     //calling table footer (total) once all markets are printed on the table
     if (callFooter == locationNum) {
         callFooter++
@@ -136,7 +135,12 @@ function footer(sum) {
         total = 0 // to calculate the total avg for all locations for the next hour
 
         // footerRow.setAttribute("style", "border:  1px solid; ")
+    
     }
+
+    
+
+    
     alltotal(allTotal)// to print total hours for all locations and all hours
 
 }
@@ -157,9 +161,9 @@ function eachrow(avgPerHour) {
 }
 
 
-const Seattle = new CookieStore('Seattle', 23, 65, 6.3)
+const Seattle = new CookieStore('Seattle', 3, 5, 1)
 const Tokyo = new CookieStore('Tokyo', 3, 24, 1.2)
-const Dubai = new CookieStore('Dubai', 38, 3.7, 6.3)
+const Dubai = new CookieStore('Dubai', 11, 38, 3.7)
 const Paris = new CookieStore('Paris', 20, 38, 2.3)
 const Lima = new CookieStore('Lima', 2, 16, 4.6)
 
@@ -168,3 +172,38 @@ Tokyo.getValues()
 Dubai.getValues()
 Paris.getValues()
 Lima.getValues()
+
+
+
+newelement.addEventListener('submit',newstore)
+
+function newstore(event)
+{
+    locationNum++
+
+    console.log(locationNum)
+    console.log("locationnum"+locationNum)
+    event.preventDefault()
+    let location=event.target.Location.value
+    console.log(location)
+       let minCustomer=parseInt( event.target.minCustomers.value)
+       console.log(minCustomer)
+       let maxCustomer=parseInt (event.target.maxCustomers.value)
+       console.log(maxCustomer)
+       let avgCookies=parseFloat( event.target.avgCookie.value ) 
+       console.log(avgCookie)  
+
+
+const bahaa= new CookieStore(location,minCustomer,maxCustomer,avgCookies)
+bahaa.getValues()
+
+
+table.textContent=''
+callFooter = 0
+const rePrint=allElements.length
+for(let i=0 ; i < rePrint;i++)
+{
+ allElements[i].getValues()
+}
+
+}

@@ -89,7 +89,22 @@ footer{
     padding: 1.2%;
 }
 
-
+.container
+{
+    text-align: center;
+}
+.container form label,input
+{
+    margin: 5px;
+    padding: 3px;
+}
+.container form label
+{
+    display: inline-block;
+    width:100px;
+    font-weight: 700;
+ 
+}
 
 
 .textSection
