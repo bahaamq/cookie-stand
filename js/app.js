@@ -83,12 +83,16 @@ function header(parent, table) {
     heading.textContent = 'Daily location Total'
 }
 
-//VAriables for footer and total values 
-let footerRow = ''
+//VAriables for footer and total values
+let footerRow = '' 
+
+function footer(sum) {
+
+  
 let allTotal =0
 let total =0 
 let priceCursor = 0
-function footer(sum) {
+
     let row = document.createElement('tr')
     table.appendChild(row)
 
@@ -161,7 +165,7 @@ function newstore(event) {
 
 
     rePrint=allElements.length
-    
+    avgForAllstoresContainer=[]
    header(parent,table)
     for (let i = 0; i < rePrint; i++) {
         allElements[i].getValues()
