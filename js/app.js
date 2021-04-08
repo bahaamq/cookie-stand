@@ -162,14 +162,12 @@ function newstore(event) {
 
     rePrint=allElements.length
     
-   
+   header(parent,table)
     for (let i = 0; i < rePrint; i++) {
         allElements[i].getValues()
 
     }
 
     footer(avgForAllstoresContainer)
-
-
 
 }
