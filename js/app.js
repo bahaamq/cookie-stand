@@ -30,6 +30,7 @@ function randomNumber(min, max) {
 //Global variables
 const parent = document.getElementById('parent')
 const table = document.createElement('table')
+table.setAttribute('id','visitor')
 let avgForAllstoresContainer = []
 let numOfLocations = 5 //number of initial stores in different locations
 const Workinghours = 14 //number of working hours per day
@@ -66,11 +67,14 @@ CookieStore.prototype.getValues = function () {
 
 //Header of table
 function header(parent, table) {
+ 
     parent.appendChild(table)
     let heading = ''
+
+    
     heading = document.createElement('th')
     table.appendChild(heading)
-    heading.textContent = ''
+    
 
     for (let i = 0; i < Workinghours; i++) {
         heading = document.createElement('th')
