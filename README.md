@@ -36,9 +36,18 @@ What should the app give
 **Q.2-**  Good. I had a problem when retriving data from HTML the type of data is a string and i was thinking it's number. so the calculation process was wrong till i knew the source of problems. as well as I made some refactor to my code.
 **Q.3-** 5 hours, i didnt think it took much but the problem with HTML data took about 3 hours because i didn't think of this untill good time as the type input type in HTML was number but when you retrive it the type will be string.
 
+*Q&A : Lab: 10b*
+
+**Q.1-** Good.
+**Q.2-** Good.
+**Q.3-** 1 Hour.
+
 *Built using 
 HTML 5,
 CSS 3 -> Layout:Float.
  JS -> Using Objects,DOM
 First version was done using : Object Literal
 Final version is built using : Constructor* 
+
+
+

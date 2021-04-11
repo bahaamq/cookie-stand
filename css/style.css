@@ -6,6 +6,7 @@ body
 
 *{
     box-sizing: border-box;
+
 }
 
 .left
@@ -24,9 +25,18 @@ body
 
 table tr,td{
     border: 1px solid black;
-  
+font-family: 'Cairo', sans-serif;
+font-weight: bolder;
+background-color:#D5D9D8;
+text-align: center;
+
 }
 
+th
+{
+    background-color: skyblue;
+    font-family: 'Anton', sans-serif;
+}
 
 
 header
@@ -92,7 +102,7 @@ main > * {
   
 }
 
-footer{
+footer,#footer2{
     background-color: skyblue;
    text-align: center;
    padding:3%;
@@ -130,6 +140,7 @@ margin-top: 3%;
     margin: auto;
  background:#DBB38F;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 
